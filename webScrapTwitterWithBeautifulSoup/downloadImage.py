@@ -43,9 +43,4 @@ for img in soup.find_all("img"):
             imagefile.close()
         except IOError:
             print filename +" is broken."
-        #print filename
-        # imagefile = open("/home/zhiboliu/Pictures/Nike/AirJordan1"+filename + ".jpeg", "wb")
-        # image1 = urllib2.urlopen(img).read()
-        # imagefile.write(image1)
-        # imagefile.close()
 

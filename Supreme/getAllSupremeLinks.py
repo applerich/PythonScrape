@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
-
-URL = 'http://www.supremenewyork.com/shop/all'
+# the page u wanna crawl
+URL = 'http://www.supremenewyork.com/shop/new'
 
 supreme = 'http://www.supremenewyork.com'
 

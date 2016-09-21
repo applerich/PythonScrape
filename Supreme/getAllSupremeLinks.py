@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import twitterNotify
 
 # the page u wanna crawl
 URL = 'http://www.supremenewyork.com/shop/new'
@@ -28,7 +29,12 @@ def get_item_data(item_link):
     for data in soup.findAll('p', {'class': 'description'}):
         dict['item_description'] = str(data.text.encode('ascii','ignore'))
     dict['item_link'] = item_link
-    print dict
+    # print dict['item_name']
+    # print dict['item_color']
+    # print dict['item_description']
+    # print dict['item_link']
+    twitterNotify.url = twitterNotify.setTweet(dict['item_name'] + ' is live. ' + dict['item_link'])
+    twitterNotify.main()
 
 
 
